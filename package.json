@@ -1,0 +1,25 @@
+{
+  "name": "algorithms-and-data-structure",
+  "version": "1.0.0",
+  "description": "test my algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:Sets": "jest __test__/sets.test.js",
+    "test:Stack": "jest __test__/stack.test.js",
+    "test:Queue": "jest __test__/queue.test.js",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "jest",
+    "test",
+    "testing",
+    "vs",
+    "code"
+  ],
+  "author": "Lenny M. Garcia",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
