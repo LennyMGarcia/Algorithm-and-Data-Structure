@@ -1,0 +1,9 @@
+Con esta app puedes abrir los documentso DFD, pienso mejor hacerlo a lapiz o con otro tipo de app y mas 
+simplificado, aqui se pierde mucho tiempo y no se ve tan claro, ademas me gustaria que este en .pdf y no en .dfd :(
+
+Lo hice lo mas cercano al codigo, puede que algunas caracteristicas o variables no se relacionen o no sean las
+mismas, me base en codigo de: https://builtin.com/software-engineering-perspectives/javascript-data-structures
+Me enfoco mas en los test y en entender el codigo, muchos de estos codigos estan transcritos aunque algunos otros
+estan realizados por mi, solo le hare documento de texto para hacer mi propia explicacion del codigo en aquellos
+documentos que me parezcan complejos o un poco mas complejos, como en el caso de la listas enlazadas, hash table, 
+arboles, grafos etc

@@ -1,0 +1,28 @@
+///Funciona bajo un array 3D, el primer numero indica la hoja o storage, el segundo es la columna y el tercero es la
+   fila, dicha fila tambien pueden llamarse registro ya que trabajamos con tablas
+
+FUNCION HASH
+--- Recibe la entrada string y el valor maximo a modular
+--- Convierte cada letra del string en su charCode y lo suma
+--- Modula la suma por el valor maximo, aqui se espera el residuo
+
+/// Como el residuo esperado en si mismo es menor a 4 entonces el array 3d
+    ejemplo: 3/4 su residuo es 3 ya que 4 no cabe en 3, los arrays se estructuran empezando por el 0, entonces habra
+    4 hojas o storage (almacenamiento): la 0, la 1, la 2 y la 3. Hay versionas mas robustas de esta hash table.
+
+FUNCION HASHTABLE
+- Add
+--- Recibe la entrada de la clave y el valor
+--- Ingresar valor si el storage es indefinido 
+--- Actualizar valor si la clave insertada es igual en el estorage
+--- Empujar valor si el estorage es definido y la clave no se ha instertado
+- Remove
+--- Recibe la entrada de la clave
+--- Si solo hay un elemento en el almacenamiento y ese elemento se encuentra en la primera posición entonces elimina la hoja (storage)
+--- Si no busca por cada hoja y elimina aquel registro (par) que se igual a la clave indicada
+- Lookup
+--- Recibe la entrada de la clave y el valor
+--- si la hoja o storage es indefinido devuelve indefinido 
+--- si no lo es busca en cada hoja y encuentra el valor
+
+

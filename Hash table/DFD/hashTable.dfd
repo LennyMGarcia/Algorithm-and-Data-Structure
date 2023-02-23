@@ -1,0 +1,283 @@
+ Dfd (c)
+1
+1
+5
+0
+0
+4
+1
+33
+Esta es la funcion o clase lookup
+6
+2
+7
+storage
+2
+[]
+12
+storageLimit
+1
+4
+4
+1
+46
+Lo de abajo es solo para mostrar las funciones
+6
+3
+3
+add
+12
+(key, value)
+6
+remove
+5
+(key)
+6
+lookup
+5
+(ley)
+1
+2
+1
+4
+hash
+1
+11
+string, max
+0
+6
+1
+4
+hash
+1
+0
+8
+1
+1
+i
+1
+1
+0
+1
+16
+i <string.length
+1
+1
+1
+6
+1
+4
+hash
+27
+hash + string.charCodeAt(i)
+10
+4
+1
+17
+return hash % max
+3
+2
+1
+3
+add
+1
+10
+key, value
+0
+12
+1
+4
+hash
+1
+11
+string, max
+6
+1
+5
+index
+23
+ has(key, storageLimit)
+7
+0
+1
+28
+storage[index] === undefined
+6
+1
+8
+inserted
+5
+false
+8
+1
+1
+i
+1
+1
+0
+1
+25
+i < storage[index].length
+1
+1
+1
+7
+0
+1
+27
+storage[inde][i][0] === key
+6
+1
+8
+inserted
+5
+false
+13
+6
+2
+20
+storage[index][i][0]
+5
+value
+8
+inserted
+4
+true
+13
+10
+7
+0
+1
+18
+inserted === false
+13
+5
+1
+33
+storage[index].push([key, value])
+13
+13
+6
+1
+14
+storage[index]
+16
+[ [key, value] ]
+13
+3
+2
+1
+6
+delete
+1
+3
+key
+0
+12
+1
+4
+hash
+1
+11
+string, max
+6
+1
+5
+index
+23
+hash(key, storageLimit)
+7
+0
+1
+59
+storage[index].length === 1 && storage[index][0][0] === key
+8
+1
+1
+i
+1
+1
+0
+1
+25
+i < storage[index].length
+1
+1
+1
+7
+0
+1
+28
+storage[index][i][0] === key
+13
+4
+1
+24
+delete storage[index][i]
+13
+10
+13
+5
+1
+21
+delete storage[index]
+13
+3
+2
+1
+6
+lookup
+1
+3
+key
+0
+12
+1
+4
+hash
+1
+11
+string, max
+6
+1
+5
+index
+23
+hash(key, storageLimit)
+7
+0
+1
+28
+storage[index] === undefined
+8
+1
+1
+i
+1
+1
+0
+1
+26
+ i < storage[index].kength
+1
+1
+1
+7
+0
+1
+28
+storage[index][i][0] === key
+13
+4
+1
+27
+return storage[index][i][1]
+13
+10
+13
+4
+1
+16
+return undefined
+13
+3
