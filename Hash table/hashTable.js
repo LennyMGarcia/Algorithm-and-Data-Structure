@@ -1,77 +1,130 @@
-function hash(string, max) {
+const Hash = (string, max) => 
+{
   var hash = 0;
-  for (var i = 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i++) 
+  {
     hash += string.charCodeAt(i);
   }
-  return hash % max;
+  return hash % max
 }
 
-function HashTable() {
-  let storage = [];
-  const storageLimit = 4;
+class HashTable 
+{
+  constructor() 
+  {
+    this.storage = [];
+    this.storageLimit = 4;
+  }
 
-  this.add = function (key, value) {
-    var index = hash(key, storageLimit);
-    if (storage[index] === undefined) {
-      storage[index] = [
-        [key, value]
-      ];
-    } else {
-      var inserted = false;
-      for (var i = 0; i < storage[index].length; i++) {
-        if (storage[index][i][0] === key) {
-          storage[index][i][1] = value;
+  add(key, value)
+   {
+    var index = Hash(key, this.storageLimit)
+
+    if (this.storage[index] === undefined) 
+    {
+      this.storage[index] = [[key, value]];
+    }
+
+    else
+     {
+      let inserted = false;
+
+      for (let i = 0; i < this.storage[index].length; i++) 
+      {
+        if (this.storage[index][i][0] === key) 
+        {
+          this.storage[index][i][1] = value;
+
           inserted = true;
         }
       }
-      if (inserted === false) {
-        storage[index].push([key, value]);
+      if (inserted === false) 
+      {
+        this.storage[index].push([key, value])
       }
     }
   }
 
-  this.remove = function (key) {
-    var index = hash(key, storageLimit);
-    if (storage[index].length === 1 && storage[index][0][0] === key) {
-      delete storage[index];
-    } else {
-      for (var i = 0; i < storage[index]; i++) {
-        if (storage[index][i][0] === key) {
-          delete storage[index][i];
+  remove(key) 
+  {
+    var index = Hash(key, this.storageLimit)
+
+    if (this.storage[index].length === 1 && this.storage[index][0][0] === key) 
+    {
+      delete this.storage[index];
+    }
+
+    else 
+    {
+      for (let i = 0; i < this.storage[index].length; i++) 
+      {
+        if (this.storage[index][i][0] === key)
+        {
+          delete this.storage[index][i][0];
+          delete this.storage[index][i][1];
         }
       }
     }
   }
 
-  this.lookup = function (key) {
-    var index = hash(key, storageLimit);
-    if (storage[index] === undefined) {
-      return undefined;
-    } else {
-      for (var i = 0; i < storage[index].length; i++) {
-        if (storage[index][i][0] === key) {
-          return storage[index][i][1];
+  lookup(key) 
+  {
+    var index = Hash(key, this.storageLimit)
+
+    if (this.storage[index] === undefined) 
+    {
+      return 'unknown';
+    }
+    else 
+    {
+      for (let i = 0; i < this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) 
+        {
+          return this.storage[index][i][1];
+        }
+        if(this.storage[index][i][0] === undefined)
+        {
+          return 'unknown'
         }
       }
     }
   }
 }
 
-const hashTable = new HashTable();
+const prueba = new HashTable();
 
-hashTable.add("lenny", 25);
-hashTable.add("ynnel", 28);
-hashTable.add("lenny", 28);
-hashTable.add("garcia", 25);
-hashTable.add("jose", 25);
-hashTable.add("perez", 25);
-hashTable.add("carlos", 26);
-hashTable.add("oroscopo", 25);
+prueba.add("Lenny", 10);
+prueba.add("Yael", 20);
+prueba.add("Elen", 30);
+prueba.add("Beleric", 40);
+prueba.add("Jose", 50);
+prueba.add("Manuel", 60);
+prueba.add("Zorrilla", 70);
+prueba.add("Carlos", 80);
 
- console.table(hashTable.lookup("ynnel"));
+console.log(prueba.lookup("Lenny"));
+console.log(prueba.lookup("Yael"));
+console.log(prueba.lookup("Elen"));
+console.log(prueba.lookup("Beleric"));
+console.log(prueba.lookup("Jose"));
+console.log(prueba.lookup("Manuel"));
+console.log(prueba.lookup("Zorrilla"));
+console.log(prueba.lookup("Carlos"));
 
- var array3D = [];
- 
- array3D[1] = 4;
+prueba.remove("Jose");
+prueba.remove("Manuel");
+prueba.remove("Carlos")
+prueba.remove('?');
 
-console.table(array3D[1].length);
+console.log('--------------------------------')
+
+console.log(prueba.lookup("Lenny"));
+console.log(prueba.lookup("Yael"));
+console.log(prueba.lookup("Elen"));
+console.log(prueba.lookup("Beleric"));
+console.log(prueba.lookup("Jose"));
+console.log(prueba.lookup("Manuel"));
+console.log(prueba.lookup("Zorrilla"));
+console.log(prueba.lookup("Carlos"));
+
+
