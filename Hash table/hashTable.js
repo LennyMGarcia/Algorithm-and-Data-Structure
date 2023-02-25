@@ -73,7 +73,7 @@ class HashTable
 
     if (this.storage[index] === undefined) 
     {
-      return 'unknown';
+      return undefined;
     }
     else 
     {
@@ -84,7 +84,7 @@ class HashTable
         }
         if(this.storage[index][i][0] === undefined)
         {
-          return 'unknown'
+          return undefined
         }
       }
     }
@@ -126,5 +126,7 @@ console.log(prueba.lookup("Jose"));
 console.log(prueba.lookup("Manuel"));
 console.log(prueba.lookup("Zorrilla"));
 console.log(prueba.lookup("Carlos"));
+
+module.exports = {Hash, HashTable};
 
 
