@@ -1,0 +1,72 @@
+NODE
+--- Recibe el elemento 
+--- Se declara el elemento y el "siguiente"
+
+LINKEDLIST
+--- Se declara el ancho, la cabeza de la lista 
+
+-Size
+--- Función que devuelve el tamaño 
+
+-Head
+--- Función que devuelve la cabeza de la lista 
+
+-Add
+--- Recibe un elemento 
+--- Se crea un objeto 'nodo' que recibe el elemento de la función 
+--- Si la cabeza está vacía entonces la cabeza es el nodo 
+--- Si no, el nodo corriente será la cabeza y mientras el nodo tenga 
+    valor el nodo corriente pasará al siguiente nodo hasta encontrar aquel que no lo tiene. 
+    Al final ese último siguiente nodo será igual al valor del nodo objeto
+--- Se incrementa el ancho 
+
+-Remove
+--- Recibe el elemento
+--- Hay un nodo corriente que será igual al valor de la cabeza y un nodo previo
+--- Si el elemento del nodo corriente (la cabeza) es estrictamente el nodo que queremos 
+    borrar, entonces la referencia de la cabeza es igual a la referencia del nodo siguiente
+--- Si no lo es, entonces mientras no lo sea, el nodo previo es igual al nodo corriente y 
+    el nodo corriente es igual al siguiente,  cuando se encuentre el valor entonces 
+    el siguiente al nodo previo, será igual al nodo siguiente siguiente 
+    (osea el valor que queremos eliminar no tendrá referencia osea ese valor sera el siguiente)
+-- Se resta el ancho
+
+-IsEmpty
+--- Se evalúa si estrictamente el ancho es igual a 0
+
+-IndexOf
+--- Recibe el elemento 
+--- se delcara un índice en -1 (para especificar que no se encontró el elemento) y
+     el nodo corriente como la cabeza
+--- mientras el nodo corriente no sea nulo aumenta el índice en 1
+--- Si el valor del elemento del nodo corriente es igual al elementos que buscamos, retorna el índice
+--- El nodo corriente es igual al nodo siguiente
+--- Si nada se encuentra retorna -1
+
+-ElementAt
+--- Recibe un índice 
+--- Comienza la cuenta en 0
+-- El nodo corriente es igual a la cabeza
+--- Mientras la cuenta sea menor a índice, aumenta la cuenta  y el nodo corriente será 
+    igual al siguiente, cuando llegue hasta el índice entonces devuelve el elemento del nodo 
+
+-AddAt
+--- Recibe un índice y un elemento 
+--- Se declara un nuevo objeto nodo que recibe el elemento,  un nodo corriente que será la cabeza, 
+    un nodo previo y un índice corriente igual a 0
+--- Si el índice es mayor al tamaño de la lista  entonces devuelve falso
+--- Si no, mientras el índice corriente sea menor al índice, se aumenta el índice corriente, 
+    el nodo previo sera igual al corriente, y el corriente al siguiente, si llega al completar
+    las vueltas entonces el  objeto nodo  siguiente  será igual al nodo corriente y el nodo 
+    previo al siguiente será igual al nodo objeto (Se crea una nueva referencia, una 
+--- se aumenta el ancho 
+
+-RemoveAt
+--- Recibe un índice
+--- Se declara un nodo corriente que será la cabeza, un nodo previo y un índice corriente igual a 0
+-- Si el índice es menor a 0 o el índice es mayor al tamaño de la lista, retorna null
+--- Si el índice es igual a 0, entonces la cabeza es igual al siguiente
+--- mientas el índice corriente sea menor al índice, entonces aumenta el indice, pon que el indice
+    previo sea igual al corriente y el corriente al siguiente, si se completa el ciclo, haz la misma 
+    operación de eliminación, de asignar el siguiente nodo previo al nodo siguiente síguiente
+-- Reduce el ancho
