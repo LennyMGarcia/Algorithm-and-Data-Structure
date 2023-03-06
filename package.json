@@ -9,7 +9,8 @@
     "test:Stack": "jest __test__/stack.test.js",
     "test:Queue": "jest __test__/queue.test.js",
     "test:coverage": "jest --coverage",
-    "test:HashTable": "jest __test__/hashTable.test.js"
+    "test:HashTable": "jest __test__/hashTable.test.js",
+    "test:LinkedList": "jest __test__/linkedList.test.js"
   },
   "keywords": [
     "jest",

@@ -16,7 +16,7 @@ class LinkedList {
         return this.length;
     }
 
-    head() {
+    Head() {
         return this.head;
     }
 
@@ -71,7 +71,7 @@ class LinkedList {
         while (currentNode) {
             index++;
 
-            if (currentNode === element) {
+            if (currentNode.element === element) {
                 return index;
             }
 
@@ -198,6 +198,8 @@ linked.remove(4);
  console.log(linked.indexOf(8));
 
  console.log(linked.elementAt(1));
+
+ module.exports = {LinkedList: LinkedList};
 
 
 
